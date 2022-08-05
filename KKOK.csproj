@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="KKOK_WEBServer\**" />
+    <EmbeddedResource Remove="KKOK_WEBServer\**" />
+    <None Remove="KKOK_WEBServer\**" />
+    <Page Remove="KKOK_WEBServer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\ViewModel\" />
+    <Folder Include="Views\View\" />
+  </ItemGroup>
+
+</Project>

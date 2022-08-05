@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KKOK_WEB</name>
+    </assembly>
+    <members>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.Get(OracleEFCore5.Application.Features.DbTestTable.Queries.Gets.GetTestTablesQuery)">
+			<summary>
+				GET: api/controller
+			</summary>
+			<param name="filter"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.Get(System.Guid)">
+			<summary>
+				GET api/controller/5
+			</summary>
+			<param name="id"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.Post(OracleEFCore5.Application.Features.DbTestTable.Commands.Create.CreateTestTableCommand)">
+			<summary>
+				POST api/controller
+			</summary>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.AddMock(OracleEFCore5.Application.Features.DbTestTable.Commands.Create.InsertMockTestTableCommand)">
+			<summary>
+				Bulk insert fake data by specifying number of rows
+			</summary>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.Put(System.Guid,OracleEFCore5.Application.Features.DbTestTable.Commands.Update.UpdateTestTableCommand)">
+			<summary>
+				PUT api/controller/5
+			</summary>
+			<param name="id"></param>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.TestTablesController.Delete(System.Guid)">
+			<summary>
+				DELETE api/controller/5
+			</summary>
+			<param name="id"></param>
+			<returns></returns>
+		</member>
+
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.Get(OracleEFCore5.Application.Features.DbTestTable.Queries.Gets.GetMembersQuery)">
+			<summary>
+				GET: api/controller
+			</summary>
+			<param name="filter"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.Get(System.Guid)">
+			<summary>
+				GET api/controller/5
+			</summary>
+			<param name="id"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.Post(OracleEFCore5.Application.Features.DbTestTable.Commands.Create.CreateMemberCommand)">
+			<summary>
+				POST api/controller
+			</summary>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.AddMock(OracleEFCore5.Application.Features.DbTestTable.Commands.Create.InsertMockMemberCommand)">
+			<summary>
+				Bulk insert fake data by specifying number of rows
+			</summary>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.Put(System.Guid,OracleEFCore5.Application.Features.DbTestTable.Commands.Update.UpdateMemberCommand)">
+			<summary>
+				PUT api/controller/5
+			</summary>
+			<param name="id"></param>
+			<param name="command"></param>
+			<returns></returns>
+		</member>
+		<member name="M:KKOK_WEB.Controllers.TableEntityController.MembersController.Delete(System.Guid)">
+			<summary>
+				DELETE api/controller/5
+			</summary>
+			<param name="id"></param>
+			<returns></returns>
+		</member>
+		
+    </members>
+</doc>

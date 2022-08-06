@@ -10,5 +10,7 @@ namespace OracleEFCore5.Application.Interfaces
         List<TestTable> SeedTestTables(int rowCount);
         List<Member> GetMembers(int rowCount);
         List<Member> SeedMembers(int rowCount);
+        List<Pjt_Member> GetProjectMembers(int rowCount);
+        List<Pjt_Member> SeedProjectMembers(int rowCount);
     }
 }

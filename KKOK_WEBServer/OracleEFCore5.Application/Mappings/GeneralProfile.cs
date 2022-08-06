@@ -20,8 +20,17 @@ namespace OracleEFCore5.Application.Mappings
             CreateMap<InsertMockTestTableCommand, TestTable>().ReverseMap();
             CreateMap<UpdateTestTableCommand, TestTable>().ReverseMap();
             CreateMap<DeleteTestTableByIdCommand, TestTable>().ReverseMap();
+
             CreateMap<Member, MembersData>().ReverseMap();
-            CreateMap<CreateMemberCommand, Member>().ReverseMap();
+            CreateMap<CreateProjectMemberCommand, Member>().ReverseMap();
+
+            CreateMap<Pjt_Member, ProjectMembersData>().ReverseMap();
+            CreateMap<CreateProjectMemberCommand, Pjt_Member>().ReverseMap();
+            CreateMap<GetProjectMembersQuery, Pjt_Member>().ReverseMap();
+            CreateMap<GetProjectMemberByIdQuery, Pjt_Member>().ReverseMap();
+            CreateMap<InsertMockProjectMemberCommand, Pjt_Member>().ReverseMap();
+            CreateMap<UpdateProjectMemberCommand, Pjt_Member>().ReverseMap();
+            CreateMap<DeleteProjectMemberByIdCommand, Pjt_Member>().ReverseMap();
         }
     }
 

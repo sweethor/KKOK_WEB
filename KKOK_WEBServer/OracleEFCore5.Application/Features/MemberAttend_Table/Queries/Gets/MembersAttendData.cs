@@ -1,10 +1,10 @@
-﻿using OracleEFCore5.Domain.Common;
+﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OracleEFCore5.Domain.Entities.DBTables
+namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
 {
     [Table("TEST_MEMBER_ATTEND")]
-    public class Member_Attend : AuditableBaseEntity
+    public class MembersAttendData
     {
         [Column("PJT_CODE")]
         public int Pjt_Code { get; set; }
@@ -16,5 +16,6 @@ namespace OracleEFCore5.Domain.Entities.DBTables
         public int Member_Issue_Cnt { get; set; }
         [Column("MEMBER_COM_ISSUE")]
         public int Member_Com_Issue { get; set; }
+
     }
 }

@@ -23,6 +23,7 @@ namespace OracleEFCore5.Application
             services.AddScoped<IDataShapeHelper<Member>, DataShapeHelper<Member>>();
             services.AddScoped<IDataShapeHelper<Pjt_Member>, DataShapeHelper<Pjt_Member>>();
             services.AddScoped<IDataShapeHelper<Pjt_Plan>, DataShapeHelper<Pjt_Plan>>();
+            services.AddScoped<IDataShapeHelper<Member_Attend>, DataShapeHelper<Member_Attend>>();
             services.AddScoped<IModelHelper, ModelHelper>();
             //services.AddScoped<IMockData, MockData>();
         }

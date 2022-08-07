@@ -30,6 +30,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
         public DbSet<Member> Members { get; set; }
         public DbSet<Pjt_Member> ProjectMembers { get; set; }
         public DbSet<Pjt_Plan> ProjectPlans { get; set; }
+        public DbSet<Member_Attend> MembersAttend { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
@@ -53,6 +54,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
             builder.Entity<Member>().HasData(Seedmembers());
             builder.Entity<Pjt_Member>().HasData(Seedpjtmembers());
             builder.Entity<Pjt_Plan>().HasData(Seedpjtplans());
+            builder.Entity<Member_Attend>().HasData(Seedmembersattend());
             builder.HasDefaultSchema("C##TEST");
 
             base.OnModelCreating(builder);
@@ -87,6 +89,12 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
             var _mockData = this.Database.GetService<IMockService>();
             var ProjectPlans = _mockData.SeedProjectPlans(1000);
             return ProjectPlans;
+        }
+        private List<Member_Attend> Seedmembersattend()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var MembersAttend = _mockData.SeedMembersAttend(1000);
+            return MembersAttend;
         }
     }
 }

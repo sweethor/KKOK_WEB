@@ -39,6 +39,14 @@ namespace OracleEFCore5.Application.Mappings
             CreateMap<InsertMockProjectPlanCommand, Pjt_Plan>().ReverseMap();
             CreateMap<UpdateProjectPlanCommand, Pjt_Plan>().ReverseMap();
             CreateMap<DeleteProjectPlanByIdCommand, Pjt_Plan>().ReverseMap();
+
+            CreateMap<Member_Attend, MembersAttendData>().ReverseMap();
+            CreateMap<CreateMemberAttendCommand, Member_Attend>().ReverseMap();
+            CreateMap<GetMembersAttendQuery, Member_Attend>().ReverseMap();
+            CreateMap<GetMemberAttendByIdQuery, Member_Attend>().ReverseMap();
+            CreateMap<InsertMockMemberAttendCommand, Member_Attend>().ReverseMap();
+            CreateMap<UpdateMemberAttendCommand, Member_Attend>().ReverseMap();
+            CreateMap<DeleteMemberAttendByIdCommand, Member_Attend>().ReverseMap();
         }
     }
 

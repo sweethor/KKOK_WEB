@@ -15,44 +15,45 @@ using System.Threading.Tasks;
 
 namespace OracleEFCore5.Infrastructure.Persistence.Repositories
 {
-    public class ProjectMemberRepositoryAsync : GenericRepositoryAsync<Pjt_Member>, IProjectMemberRepositoryAsync
+    public class ProjectPlanRepositoryAsync : GenericRepositoryAsync<Pjt_Plan>, IProjectPlanRepositoryAsync
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly DbSet<Pjt_Member> projectmember;
-        private IDataShapeHelper<Pjt_Member> _dataShaper;
+        private readonly DbSet<Pjt_Plan> projectplan;
+        private IDataShapeHelper<Pjt_Plan> _dataShaper;
         private readonly IMockService _mockData;
 
-        public ProjectMemberRepositoryAsync(ApplicationDbContext dbContext,
-            IDataShapeHelper<Pjt_Member> dataShaper, IMockService mockData) : base(dbContext)
+        public ProjectPlanRepositoryAsync(ApplicationDbContext dbContext,
+            IDataShapeHelper<Pjt_Plan> dataShaper, IMockService mockData) : base(dbContext)
         {
             _dbContext = dbContext;
-            projectmember = dbContext.Set<Pjt_Member>();
+            projectplan = dbContext.Set<Pjt_Plan>();
             _dataShaper = dataShaper;
             _mockData = mockData;
         }
 
-        public async Task<bool> IsUniqueProjectMemberCodeAsync(string code)
+        public async Task<bool> IsUniqueProjectPlanCodeAsync(string code)
         {
-            return await projectmember
+            return await projectplan
                 .AllAsync(p => p.Pjt_Code.ToString() != code);
         }
 
         public async Task<bool> SeedDataAsync(int rowCount)
         {
-            foreach (Pjt_Member projectmember in _mockData.GetProjectMembers(rowCount))
+            foreach (Pjt_Plan projectplan in _mockData.GetProjectPlans(rowCount))
             {
-                await this.AddAsync(projectmember);
+                await this.AddAsync(projectplan);
             }
             return true;
         }
 
-        public async Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedProjectMemberReponseAsync(GetProjectMembersQuery requestParameter)
+        public async Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedProjectPlanReponseAsync(GetProjectPlansQuery requestParameter)
         {
             var pjt_code = requestParameter.Pjt_Code;
             var mem_code = requestParameter.Member_Code;
-            var mem_name = requestParameter.Member_Name;
-            var mem_job = requestParameter.Member_Job;
-            var mem_pjt_permission = requestParameter.Member_Pjt_Permission;
+            var plan_code = requestParameter.Plan_Code;
+            var plan_start_date = requestParameter.Plan_Start_Date;
+            var plan_end_date = requestParameter.Plan_End_Date;
+            var plan_description = requestParameter.Plan_Description;
 
             var pageNumber = requestParameter.PageNumber;
             var pageSize = requestParameter.PageSize;
@@ -62,7 +63,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Repositories
             int recordsTotal, recordsFiltered;
 
             // Setup IQueryable
-            var result = projectmember
+            var result = projectplan
                 .AsNoTracking()
                 .AsExpandable();
 
@@ -70,7 +71,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Repositories
             recordsTotal = await result.CountAsync();
 
             // filter data
-            FilterByColumn(ref result, pjt_code);
+            FilterByColumn(ref result, plan_code);
 
             // Count records after filter
             recordsFiltered = await result.CountAsync();
@@ -91,7 +92,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Repositories
             // select columns
             if (!string.IsNullOrWhiteSpace(fields))
             {
-                result = result.Select<Pjt_Member>("new(" + fields + ")");
+                result = result.Select<Pjt_Plan>("new(" + fields + ")");
             }
             // paging
             result = result
@@ -106,20 +107,20 @@ namespace OracleEFCore5.Infrastructure.Persistence.Repositories
             return (shapeData, recordsCount);
         }
 
-        private void FilterByColumn(ref IQueryable<Pjt_Member> projectmembers, int code)
+        private void FilterByColumn(ref IQueryable<Pjt_Plan> projectplans, int code)
         {
-            if (!projectmembers.Any())
+            if (!projectplans.Any())
                 return;
 
             if (string.IsNullOrEmpty(code.ToString()))
                 return;
 
-            var predicate = PredicateBuilder.New<Pjt_Member>();
+            var predicate = PredicateBuilder.New<Pjt_Plan>();
 
             if (!string.IsNullOrEmpty(code.ToString()))
                 predicate = predicate.Or(p => p.Pjt_Code.ToString().Contains(code.ToString().Trim()));
 
-            projectmembers = projectmembers.Where(predicate);
+            projectplans = projectplans.Where(predicate);
         }
     }
 }

@@ -7,9 +7,9 @@ namespace OracleEFCore5.Domain.Entities.DBTables
     public class Pjt_Member : AuditableBaseEntity
     {
         [Column("PJT_CODE")]
-        public string Pjt_Code { get; set; }
+        public int Pjt_Code { get; set; }
         [Column("MEMBER_CODE")]
-        public string Member_Code { get; set; }
+        public int Member_Code { get; set; }
         [Column("MEMBER_NAME")]
         public string Member_Name { get; set; }
         [Column("MEMBER_JOB")]

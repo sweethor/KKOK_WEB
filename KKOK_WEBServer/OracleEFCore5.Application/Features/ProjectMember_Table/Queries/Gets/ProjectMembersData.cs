@@ -7,14 +7,14 @@ namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
     public class ProjectMembersData
     {
         [Column("PJT_CODE")]
-        public int pjt_code { get; set; }
+        public int Pjt_Code { get; set; }
         [Column("MEMBER_CODE")]
-        public int member_code { get; set; }
+        public int Member_Code { get; set; }
         [Column("MEMBER_NAME")]
-        public string member_name { get; set; }
+        public string Member_Name { get; set; }
         [Column("MEMBER_JOB")]
-        public string member_job { get; set; }
+        public string Member_Job { get; set; }
         [Column("MEMBER_PJT_PERMISSION")]
-        public int member_pjt_permission { get; set; }
+        public string Member_Pjt_Permission { get; set; }
     }
 }

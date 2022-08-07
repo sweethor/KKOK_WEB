@@ -1,11 +1,10 @@
-﻿using OracleEFCore5.Domain.Common;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OracleEFCore5.Domain.Entities.DBTables
+namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
 {
     [Table("TEST_PJT_PLAN")]
-    public class Pjt_Plan : AuditableBaseEntity
+    public class ProjectPlansData
     {
         [Column("PJT_CODE")]
         public int Pjt_Code { get; set; }

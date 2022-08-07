@@ -6,18 +6,19 @@ using System;
 
 namespace OracleEFCore5.Infrastructure.Shared.Mock
 {
-    public class ProjectMemberSeedBogusConfig : AutoFaker<Pjt_Member>
+    public class ProjectPlanSeedBogusConfig : AutoFaker<Pjt_Plan>
     {
-        public ProjectMemberSeedBogusConfig()
+        public ProjectPlanSeedBogusConfig()
         {
             Randomizer.Seed = new Random(8675309);
             var id = 1;
             RuleFor(m => m.Id, f => Guid.NewGuid());
             RuleFor(o => o.Pjt_Code.ToString(), f => f.Name.JobTitle());
             RuleFor(o => o.Member_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Name, f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Job, f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Pjt_Permission, f => f.Name.JobTitle());
+            RuleFor(o => o.Plan_Code.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Plan_Start_Date.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Plan_End_Date.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Plan_Description, f => f.Name.JobTitle());
             RuleFor(o => o.Created, f => f.Date.Past(1));
             RuleFor(o => o.CreatedBy, f => f.Name.FullName());
             RuleFor(o => o.LastModified, f => f.Date.Recent(1));

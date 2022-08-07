@@ -11,8 +11,8 @@ namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Update
     public class UpdateProjectMemberCommand : IRequest<Response<Guid>>
     {
         public Guid Id { get; set; }
-        public string Pjt_Code { get; set; }
-        public string Member_Code { get; set; }
+        public int Pjt_Code { get; set; }
+        public int Member_Code { get; set; }
         public string Member_Name { get; set; }
         public string Member_Job { get; set; }
         public string Member_Pjt_Permission { get; set; }

@@ -47,6 +47,46 @@ namespace OracleEFCore5.Application.Mappings
             CreateMap<InsertMockMemberAttendCommand, Member_Attend>().ReverseMap();
             CreateMap<UpdateMemberAttendCommand, Member_Attend>().ReverseMap();
             CreateMap<DeleteMemberAttendByIdCommand, Member_Attend>().ReverseMap();
+
+            CreateMap<Pjt_Notice, ProjectNoticesData>().ReverseMap();
+            CreateMap<CreateProjectNoticeCommand, Pjt_Notice>().ReverseMap();
+            CreateMap<GetProjectNoticesQuery, Pjt_Notice>().ReverseMap();
+            CreateMap<GetProjectNoticeByIdQuery, Pjt_Notice>().ReverseMap();
+            CreateMap<InsertMockProjectNoticeCommand, Pjt_Notice>().ReverseMap();
+            CreateMap<UpdateProjectNoticeCommand, Pjt_Notice>().ReverseMap();
+            CreateMap<DeleteProjectNoticeByIdCommand, Pjt_Notice>().ReverseMap();
+
+            CreateMap<Pjt_Plan_CheckList, ProjectPlanCheckListsData>().ReverseMap();
+            CreateMap<CreateProjectPlanCheckListCommand, Pjt_Plan_CheckList>().ReverseMap();
+            CreateMap<GetProjectPlanCheckListsQuery, Pjt_Plan_CheckList>().ReverseMap();
+            CreateMap<GetProjectPlanCheckListByIdQuery, Pjt_Plan_CheckList>().ReverseMap();
+            CreateMap<InsertMockProjectPlanCheckListCommand, Pjt_Plan_CheckList>().ReverseMap();
+            CreateMap<UpdateProjectPlanCheckListCommand, Pjt_Plan_CheckList>().ReverseMap();
+            CreateMap<DeleteProjectPlanCheckListByIdCommand, Pjt_Plan_CheckList>().ReverseMap();
+
+            CreateMap<Member_Notice, MembersNoticeData>().ReverseMap();
+            CreateMap<CreateMemberNoticeCommand, Member_Notice>().ReverseMap();
+            CreateMap<GetMembersNoticeQuery, Member_Notice>().ReverseMap();
+            CreateMap<GetMemberNoticeByIdQuery, Member_Notice>().ReverseMap();
+            CreateMap<InsertMockMemberNoticeCommand, Member_Notice>().ReverseMap();
+            CreateMap<UpdateMemberNoticeCommand, Member_Notice>().ReverseMap();
+            CreateMap<DeleteMemberNoticeByIdCommand, Member_Notice>().ReverseMap();
+
+            CreateMap<Pjt_Comment, ProjectCommentsData>().ReverseMap();
+            CreateMap<CreateProjectCommentCommand, Pjt_Comment>().ReverseMap();
+            CreateMap<GetProjectCommentsQuery, Pjt_Comment>().ReverseMap();
+            CreateMap<GetProjectCommentByIdQuery, Pjt_Comment>().ReverseMap();
+            CreateMap<InsertMockProjectCommentCommand, Pjt_Comment>().ReverseMap();
+            CreateMap<UpdateProjectCommentCommand, Pjt_Comment>().ReverseMap();
+            CreateMap<DeleteProjectCommentByIdCommand, Pjt_Comment>().ReverseMap();
+
+            CreateMap<Pjt_Mention, ProjectMentionsData>().ReverseMap();
+            CreateMap<CreateProjectMentionCommand, Pjt_Mention>().ReverseMap();
+            CreateMap<GetProjectMentionsQuery, Pjt_Mention>().ReverseMap();
+            CreateMap<GetProjectMentionByIdQuery, Pjt_Mention>().ReverseMap();
+            CreateMap<InsertMockProjectMentionCommand, Pjt_Mention>().ReverseMap();
+            CreateMap<UpdateProjectMentionCommand, Pjt_Mention>().ReverseMap();
+            CreateMap<DeleteProjectMentionByIdCommand, Pjt_Mention>().ReverseMap();
         }
     }
 

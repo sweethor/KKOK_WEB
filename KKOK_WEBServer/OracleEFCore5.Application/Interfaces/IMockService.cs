@@ -16,5 +16,15 @@ namespace OracleEFCore5.Application.Interfaces
         List<Pjt_Plan> SeedProjectPlans(int rowCount);
         List<Member_Attend> GetMembersAttend(int rowCount);
         List<Member_Attend> SeedMembersAttend(int rowCount);
+        List<Pjt_Notice> GetProjectNotices(int rowCount);
+        List<Pjt_Notice> SeedProjectNotices(int rowCount);
+        List<Pjt_Plan_CheckList> GetProjectPlanCheckLists(int rowCount);
+        List<Pjt_Plan_CheckList> SeedProjectPlanCheckLists(int rowCount);
+        List<Member_Notice> GetMembersNotice(int rowCount);
+        List<Member_Notice> SeedMembersNotice(int rowCount);
+        List<Pjt_Comment> GetProjectComments(int rowCount);
+        List<Pjt_Comment> SeedProjectComments(int rowCount);
+        List<Pjt_Mention> GetProjectMentions(int rowCount);
+        List<Pjt_Mention> SeedProjectMentions(int rowCount);
     }
 }

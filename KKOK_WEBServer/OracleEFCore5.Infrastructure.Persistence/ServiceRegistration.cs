@@ -40,6 +40,11 @@ namespace OracleEFCore5.Infrastructure.Persistence
             services.AddTransient<IProjectMemberRepositoryAsync, ProjectMemberRepositoryAsync>();
             services.AddTransient<IProjectPlanRepositoryAsync, ProjectPlanRepositoryAsync>();
             services.AddTransient<IMemberAttendRepositoryAsync, MemberAttendRepositoryAsync>();
+            services.AddTransient<IProjectNoticeRepositoryAsync, ProjectNoticeRepositoryAsync>();
+            services.AddTransient<IProjectPlanCheckListRepositoryAsync, ProjectPlanCheckListRepositoryAsync>();
+            services.AddTransient<IMemberNoticeRepositoryAsync, MemberNoticeRepositoryAsync>();
+            services.AddTransient<IProjectCommentRepositoryAsync, ProjectCommentRepositoryAsync>();
+            services.AddTransient<IProjectMentionRepositoryAsync, ProjectMentionRepositoryAsync>();
             #endregion
 
         }

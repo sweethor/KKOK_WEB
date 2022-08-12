@@ -58,6 +58,14 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
         {
             builder.Entity<TestTable>().HasData(Seedtesttables());
             builder.Entity<Member>().HasData(Seedmembers());
+            builder.Entity<Pjt_Member>().HasData(Seedpjtmembers());
+            builder.Entity<Pjt_Plan>().HasData(Seedpjtplans());
+            builder.Entity<Member_Attend>().HasData(Seedmembersattend());
+            builder.Entity<Pjt_Notice>().HasData(Seedpjtnotices());
+            builder.Entity<Pjt_Plan_CheckList>().HasData(Seedpjtplanchecklists());
+            builder.Entity<Member_Notice>().HasData(Seedmembersnotice());
+            builder.Entity<Pjt_Comment>().HasData(Seedpjtcomments());
+            builder.Entity<Pjt_Mention>().HasData(Seedpjtmentions());
             builder.HasDefaultSchema("C##TEST");
 
             base.OnModelCreating(builder);
@@ -80,6 +88,24 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
             var _mockData = this.Database.GetService<IMockService>();
             var Members = _mockData.SeedMembers(1000);
             return Members;
+        }
+        private List<Pjt_Member> Seedpjtmembers()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectMembers = _mockData.SeedProjectMembers(1000);
+            return ProjectMembers;
+        }
+        private List<Pjt_Plan> Seedpjtplans()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectPlans = _mockData.SeedProjectPlans(1000);
+            return ProjectPlans;
+        }
+        private List<Member_Attend> Seedmembersattend()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var MembersAttend = _mockData.SeedMembersAttend(1000);
+            return MembersAttend;
         }
     }
 }

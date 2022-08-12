@@ -1,9 +1,17 @@
 ﻿using AutoMapper;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Create;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Delete;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Update;
 using OracleEFCore5.Application.Features.DbTestTable.Commands.Create;
 using OracleEFCore5.Application.Features.DbTestTable.Commands.Delete;
 using OracleEFCore5.Application.Features.DbTestTable.Commands.Update;
 using OracleEFCore5.Application.Features.DbTestTable.Queries.GetById;
 using OracleEFCore5.Application.Features.DbTestTable.Queries.Gets;
+using OracleEFCore5.Application.Features.Project_Table.Commands.Create;
+using OracleEFCore5.Application.Features.Project_Table.Commands.Delete;
+using OracleEFCore5.Application.Features.Project_Table.Commands.Update;
+using OracleEFCore5.Application.Features.Project_Table.Queries.GetById;
+using OracleEFCore5.Application.Features.Project_Table.Queries.Gets;
 using OracleEFCore5.Domain.Entities;
 using OracleEFCore5.Domain.Entities.DBTables;
 
@@ -15,7 +23,7 @@ namespace OracleEFCore5.Application.Mappings
         {
             CreateMap<TestTable, Test_TableData>().ReverseMap();
             CreateMap<CreateTestTableCommand, TestTable>().ReverseMap();
-            CreateMap<GetTestTablesQuery, TestTable>().ReverseMap();
+            CreateMap<GetProjectsQuery, TestTable>().ReverseMap();
             CreateMap<GetTestTableByIdQuery, TestTable>().ReverseMap();
             CreateMap<InsertMockTestTableCommand, TestTable>().ReverseMap();
             CreateMap<UpdateTestTableCommand, TestTable>().ReverseMap();
@@ -23,6 +31,20 @@ namespace OracleEFCore5.Application.Mappings
 
             CreateMap<Member, MembersData>().ReverseMap();
             CreateMap<CreateProjectMemberCommand, Member>().ReverseMap();
+            reateMap<CreateMemberCommand, Member>().ReverseMap();
+            CreateMap<GetMembersQuery, Member>().ReverseMap();
+            CreateMap<GetMemberByIdQuery, Member>().ReverseMap();
+            CreateMap<InsertMockMemberCommand, Member>().ReverseMap();
+            CreateMap<UpdateMemberCommand, Member>().ReverseMap();
+            CreateMap<DeleteMemberByIdCommand, Member>().ReverseMap();
+
+            CreateMap<Project, ProjectsData>().ReverseMap();
+            CreateMap<CreateProjectCommand, Project>().ReverseMap();
+            CreateMap<GetProjectsQuery, Project>().ReverseMap();
+            CreateMap<GetProjectByIdQuery, Project>().ReverseMap();
+            CreateMap<InsertMockProjectCommand, Project>().ReverseMap();
+            CreateMap<UpdateProjectCommand, Project>().ReverseMap();
+            CreateMap<DeleteProjectByIdCommand, Project>().ReverseMap();
 
             CreateMap<Pjt_Member, ProjectMembersData>().ReverseMap();
             CreateMap<CreateProjectMemberCommand, Pjt_Member>().ReverseMap();

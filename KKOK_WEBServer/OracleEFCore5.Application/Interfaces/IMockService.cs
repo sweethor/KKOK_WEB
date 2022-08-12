@@ -26,5 +26,7 @@ namespace OracleEFCore5.Application.Interfaces
         List<Pjt_Comment> SeedProjectComments(int rowCount);
         List<Pjt_Mention> GetProjectMentions(int rowCount);
         List<Pjt_Mention> SeedProjectMentions(int rowCount);
+        List<Project> GetProjects(int rowCount);
+        List<Project> SeedProjects(int rowCount);
     }
 }

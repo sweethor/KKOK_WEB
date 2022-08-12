@@ -13,6 +13,6 @@ namespace OracleEFCore5.Application.Interfaces.Repositories
 
         Task<bool> SeedDataAsync(int rowCount);
 
-        Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedTestTableReponseAsync(GetTestTablesQuery requestParameters);
+        Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedTestTableReponseAsync(GetProjectsQuery requestParameters);
     }
 }

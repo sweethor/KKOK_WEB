@@ -46,7 +46,7 @@ namespace OracleEFCore5.Infrastructure.Persistence.Repositories
             return true;
         }
 
-        public async Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedTestTableReponseAsync(GetTestTablesQuery requestParameter)
+        public async Task<(IEnumerable<Entity> data, RecordsCount recordsCount)> GetPagedTestTableReponseAsync(GetProjectsQuery requestParameter)
         {
             var testName = requestParameter.TestName;
 

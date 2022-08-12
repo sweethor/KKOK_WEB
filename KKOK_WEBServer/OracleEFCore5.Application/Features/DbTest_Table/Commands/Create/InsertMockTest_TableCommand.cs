@@ -4,7 +4,7 @@ using OracleEFCore5.Application.Wrappers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Create
+namespace OracleEFCore5.Application.Features.DbTest_Table.Commands.Create
 {
     public partial class InsertMockTestTableCommand : IRequest<Response<int>>
     {

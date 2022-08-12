@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OracleEFCore5.Application.Features.DbTestTable.Commands.Create;
 using OracleEFCore5.Application.Features.DbTestTable.Commands.Delete;
-using OracleEFCore5.Application.Features.DbTestTable.Commands.Update;
 using OracleEFCore5.Application.Features.DbTestTable.Queries.Gets;
 using OracleEFCore5.Application.Features.DbTestTable.Queries.GetById;
 using Serilog;
@@ -11,6 +9,9 @@ using System;
 using System.Threading.Tasks;
 using OracleEFCore5.Domain.Entities.DBTables;
 using Newtonsoft.Json;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Create;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Update;
+using OracleEFCore5.Application.Features.DbTest_Table.Commands.Delete;
 
 namespace KKOK_WEB.Controllers.TableEntityController
 {
@@ -28,7 +29,7 @@ namespace KKOK_WEB.Controllers.TableEntityController
         /// <param name="filter"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] GetTestTablesQuery filter)//타입으로 받을 필요 X , 파라미터 통해서 값 전달 해서 DTO 통해서 de시리얼라이징 ->
+        public async Task<IActionResult> Get([FromQuery] GetProjectsQuery filter)//타입으로 받을 필요 X , 파라미터 통해서 값 전달 해서 DTO 통해서 de시리얼라이징 ->
         {
             Log.Information($"GET Position called at {DateTime.Now}");
             _loggerFactory.CreateLogger("GET Position called at");

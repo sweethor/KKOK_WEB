@@ -28,6 +28,16 @@ namespace OracleEFCore5.Infrastructure.Shared.Services
             var seedPositionFaker = new MemberSeedBogusConfig();
             return seedPositionFaker.Generate(rowCount);
         }
+        public List<Project> GetProjects(int rowCount)
+        {
+            var positionFaker = new ProjectInsertBogusConfig();
+            return positionFaker.Generate(rowCount);
+        }
+        public List<Project> SeedProjects(int rowCount)
+        {
+            var seedPositionFaker = new ProjectSeedBogusConfig();
+            return seedPositionFaker.Generate(rowCount);
+        }
 
         public List<Pjt_Member> GetProjectMembers(int rowCount)
         {

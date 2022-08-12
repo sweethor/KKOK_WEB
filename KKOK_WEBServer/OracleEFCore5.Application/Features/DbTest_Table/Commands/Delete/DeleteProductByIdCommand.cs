@@ -6,7 +6,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Delete
+namespace OracleEFCore5.Application.Features.DbTest_Table.Commands.Delete
 {
     public class DeleteTestTableByIdCommand : IRequest<Response<Guid>>
     {

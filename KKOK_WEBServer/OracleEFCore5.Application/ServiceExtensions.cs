@@ -21,6 +21,7 @@ namespace OracleEFCore5.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddScoped<IDataShapeHelper<TestTable>, DataShapeHelper<TestTable>>();
             services.AddScoped<IDataShapeHelper<Member>, DataShapeHelper<Member>>();
+            services.AddScoped<IDataShapeHelper<Project>, DataShapeHelper<Project>>();
             services.AddScoped<IDataShapeHelper<Pjt_Member>, DataShapeHelper<Pjt_Member>>();
             services.AddScoped<IDataShapeHelper<Pjt_Plan>, DataShapeHelper<Pjt_Plan>>();
             services.AddScoped<IDataShapeHelper<Member_Attend>, DataShapeHelper<Member_Attend>>();

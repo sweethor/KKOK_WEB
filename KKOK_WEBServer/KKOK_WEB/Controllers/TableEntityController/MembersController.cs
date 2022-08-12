@@ -9,7 +9,10 @@ using OracleEFCore5.Application.Features.DbTestTable.Queries.GetById;
 using Serilog;
 using System;
 using System.Threading.Tasks;
-
+using OracleEFCore5.Application.Features.Project_Table.Commands.Create;
+using OracleEFCore5.Application.Features.Project_Table.Commands.Update;
+using OracleEFCore5.Application.Features.Project_Table.Queries.GetById;
+using OracleEFCore5.Application.Features.Project_Table.Queries.Gets;
 
 namespace KKOK_WEB.Controllers.TableEntityController
 {

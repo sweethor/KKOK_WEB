@@ -107,5 +107,35 @@ namespace OracleEFCore5.Infrastructure.Persistence.Contexts
             var MembersAttend = _mockData.SeedMembersAttend(1000);
             return MembersAttend;
         }
+        private List<Pjt_Notice> Seedpjtnotices()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectNotices = _mockData.SeedProjectNotices(1000);
+            return ProjectNotices;
+        }
+        private List<Pjt_Plan_CheckList> Seedpjtplanchecklists()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectPlanCheckLists = _mockData.SeedProjectPlanCheckLists(1000);
+            return ProjectPlanCheckLists;
+        }
+        private List<Member_Notice> Seedmembersnotice()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var MembersNotice = _mockData.SeedMembersNotice(1000);
+            return MembersNotice;
+        }
+        private List<Pjt_Comment> Seedpjtcomments()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectComments = _mockData.SeedProjectComments(1000);
+            return ProjectComments;
+        }
+        private List<Pjt_Mention> Seedpjtmentions()
+        {
+            var _mockData = this.Database.GetService<IMockService>();
+            var ProjectMentions = _mockData.SeedProjectMentions(1000);
+            return ProjectMentions;
+        }
     }
 }

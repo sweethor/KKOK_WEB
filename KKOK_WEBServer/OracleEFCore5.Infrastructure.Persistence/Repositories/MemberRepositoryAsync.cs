@@ -1,6 +1,7 @@
 ﻿using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using OracleEFCore5.Application.Features.DbTestTable.Queries.Gets;
+using OracleEFCore5.Application.Features.Project_Table.Queries.Gets;
 using OracleEFCore5.Application.Interfaces;
 using OracleEFCore5.Application.Interfaces.Repositories;
 using OracleEFCore5.Application.Parameters;

@@ -6,7 +6,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Update
+namespace OracleEFCore5.Application.Features.DbTest_Table.Commands.Update
 {
     public class UpdateTestTableCommand : IRequest<Response<Guid>>
     {

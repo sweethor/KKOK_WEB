@@ -37,12 +37,12 @@ namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
             if (!string.IsNullOrEmpty(validFilter.Fields))
             {
                 //limit to fields in view model
-                validFilter.Fields = _modelHelper.ValidateModelFields<MembersData>(validFilter.Fields);
+                validFilter.Fields = _modelHelper.ValidateModelFields<Test_TableData>(validFilter.Fields);
             }
             if (string.IsNullOrEmpty(validFilter.Fields))
             {
                 //default fields from view model
-                validFilter.Fields = _modelHelper.GetModelFields<MembersData>();
+                validFilter.Fields = _modelHelper.GetModelFields<Test_TableData>();
             }
             // query based on filter
             var entitytestTables = await _testtableRepository.GetPagedTestTableReponseAsync(validFilter);

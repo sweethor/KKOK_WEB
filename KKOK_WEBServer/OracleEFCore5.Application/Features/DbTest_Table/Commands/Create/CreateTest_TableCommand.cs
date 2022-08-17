@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Create
+namespace OracleEFCore5.Application.Features.DbTest_Table.Commands.Create
 {
     public partial class CreateTestTableCommand : IRequest<Response<Guid>>
     {

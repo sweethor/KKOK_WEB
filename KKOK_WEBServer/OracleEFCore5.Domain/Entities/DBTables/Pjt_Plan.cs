@@ -1,15 +1,23 @@
 ﻿using OracleEFCore5.Domain.Common;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OracleEFCore5.Domain.Entities.DBTables
 {
+    [Table("TEST_PJT_PLAN")]
     public class Pjt_Plan : AuditableBaseEntity
     {
-        public int pjt_code { get; set; }
-        public int member_code { get; set; }
-        public int plan_code { get; set; }
-        public DateTime plan_start_date { get; set; }
-        public DateTime plan_end_date { get; set; }
-        public string plan_description { get; set; }
+        [Column("PJT_CODE")]
+        public int Pjt_Code { get; set; }
+        [Column("MEMBER_CODE")]
+        public int Member_Code { get; set; }
+        [Column("PLAN_CODE")]
+        public int Plan_Code { get; set; }
+        [Column("PLAN_START_DATE")]
+        public DateTime Plan_Start_Date { get; set; }
+        [Column("PLAN_END_DATE")]
+        public DateTime Plan_End_Date { get; set; }
+        [Column("PLAN_DESCRIPTION")]
+        public string Plan_Description { get; set; }
     }
 }

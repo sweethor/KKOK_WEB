@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace OracleEFCore5.Application.Features.DbTestTable.Commands.Create
 {
-    public class CreateMemberCommandValidator : AbstractValidator<CreateMemberCommand>
+    public class CreateProjectCommandValidator : AbstractValidator<CreateMemberCommand>
     {
         private readonly IMemberRepositoryAsync memberRepository;
 
-        public CreateMemberCommandValidator(IMemberRepositoryAsync memberRepository)
+        public CreateProjectCommandValidator(IMemberRepositoryAsync memberRepository)
         {
             this.memberRepository = memberRepository;
 

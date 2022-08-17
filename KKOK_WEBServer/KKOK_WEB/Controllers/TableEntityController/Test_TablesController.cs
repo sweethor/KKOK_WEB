@@ -1,17 +1,18 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OracleEFCore5.Application.Features.DbTestTable.Commands.Delete;
-using OracleEFCore5.Application.Features.DbTestTable.Queries.Gets;
-using OracleEFCore5.Application.Features.DbTestTable.Queries.GetById;
 using Serilog;
 using System;
 using System.Threading.Tasks;
 using OracleEFCore5.Domain.Entities.DBTables;
 using Newtonsoft.Json;
+using OracleEFCore5.Application.Features.DbTestTable.Commands.Create;
+using OracleEFCore5.Application.Features.DbTestTable.Commands.Update;
 using OracleEFCore5.Application.Features.DbTest_Table.Commands.Create;
 using OracleEFCore5.Application.Features.DbTest_Table.Commands.Update;
 using OracleEFCore5.Application.Features.DbTest_Table.Commands.Delete;
+using OracleEFCore5.Application.Features.DbTestTable.Queries.Gets;
+using OracleEFCore5.Application.Features.DbTestTable.Queries.GetById;
 
 namespace KKOK_WEB.Controllers.TableEntityController
 {

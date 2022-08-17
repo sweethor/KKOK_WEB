@@ -29,7 +29,7 @@ namespace KKOK_WEB.Controllers.TableEntityController
         /// <param name="filter"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] GetProjectsQuery filter)//타입으로 받을 필요 X , 파라미터 통해서 값 전달 해서 DTO 통해서 de시리얼라이징 ->
+        public async Task<IActionResult> Get([FromQuery] GetTestTablesQuery filter)//타입으로 받을 필요 X , 파라미터 통해서 값 전달 해서 DTO 통해서 de시리얼라이징 ->
         {
             Log.Information($"GET Position called at {DateTime.Now}");
             _loggerFactory.CreateLogger("GET Position called at");
@@ -54,7 +54,7 @@ namespace KKOK_WEB.Controllers.TableEntityController
         /// <returns></returns>
         //[HttpPost]
         //// [Authorize]
-        //public async Task<IActionResult> Post(CreateTestTableCommand command)
+        //public async Task<IActionResult> Post([FromQuery] CreateTestTableCommand command)
         //{
         //    return Ok(await Mediator.Send(command));
         //}

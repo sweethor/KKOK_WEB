@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OracleEFCore5.Domain.Entities.DBTables
 {
-    [Table("TEST_MEMBER_ATTEND")]
+    [Table("TEST_MEMBER_NOTICE")]
     public class Member_Notice : AuditableBaseEntity
     {
         [Column("PJT_CODE")]

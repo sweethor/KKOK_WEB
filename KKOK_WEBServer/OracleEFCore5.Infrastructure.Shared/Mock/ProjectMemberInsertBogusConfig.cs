@@ -8,8 +8,8 @@ namespace OracleEFCore5.Infrastructure.Shared.Mock
     {
         public ProjectMemberInsertBogusConfig()
         {
-            RuleFor(o => o.Pjt_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Code.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Pjt_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Member_Code, f => f.UniqueIndex);
             RuleFor(o => o.Member_Name, f => f.Name.JobTitle());
             RuleFor(o => o.Member_Job, f => f.Name.JobTitle());
             RuleFor(o => o.Member_Pjt_Permission, f => f.Name.JobTitle());

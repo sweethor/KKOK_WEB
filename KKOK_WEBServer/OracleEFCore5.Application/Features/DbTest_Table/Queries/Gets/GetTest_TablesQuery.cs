@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
 {
-    public class GetProjectsQuery : QueryParameter, IRequest<PagedResponse<IEnumerable<Entity>>>
+    public class GetTestTablesQuery : QueryParameter, IRequest<PagedResponse<IEnumerable<Entity>>>
     {
         public string TestName { get; set; }
     }
 
-    public class GetAllTestTablesQueryHandler : IRequestHandler<GetProjectsQuery, PagedResponse<IEnumerable<Entity>>>
+    public class GetAllTestTablesQueryHandler : IRequestHandler<GetTestTablesQuery, PagedResponse<IEnumerable<Entity>>>
     {
         private readonly ITestTableRepositoryAsync _testtableRepository;
         private readonly IMapper _mapper;
@@ -29,7 +29,7 @@ namespace OracleEFCore5.Application.Features.DbTestTable.Queries.Gets
             _modelHelper = modelHelper;
         }
 
-        public async Task<PagedResponse<IEnumerable<Entity>>> Handle(GetProjectsQuery request, CancellationToken cancellationToken)
+        public async Task<PagedResponse<IEnumerable<Entity>>> Handle(GetTestTablesQuery request, CancellationToken cancellationToken)
         {
             var validFilter = request;
             var pagination = request;

@@ -8,10 +8,10 @@ namespace OracleEFCore5.Infrastructure.Shared.Mock
     {
         public ProjectPlanCheckListInsertBogusConfig()
         {
-            RuleFor(o => o.Pjt_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Plan_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Plan_CheckList_Code.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Pjt_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Member_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Plan_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Plan_CheckList_Code, f => f.UniqueIndex);
             RuleFor(o => o.Plan_CheckList_Name, f => f.Name.JobTitle());
             RuleFor(o => o.Plan_CheckList_State.ToString(), f => f.Name.JobTitle());
             RuleFor(o => o.CreatedBy, f => f.Name.FullName());

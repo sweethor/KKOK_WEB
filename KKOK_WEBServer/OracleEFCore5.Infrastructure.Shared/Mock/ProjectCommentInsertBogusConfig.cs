@@ -8,11 +8,11 @@ namespace OracleEFCore5.Infrastructure.Shared.Mock
     {
         public ProjectCommentInsertBogusConfig()
         {
-            RuleFor(o => o.Pjt_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Plan_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Issue_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Comment_Code.ToString(), f => f.Name.JobTitle());
-            RuleFor(o => o.Member_Code.ToString(), f => f.Name.JobTitle());
+            RuleFor(o => o.Pjt_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Plan_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Issue_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Comment_Code, f => f.UniqueIndex);
+            RuleFor(o => o.Member_Code, f => f.UniqueIndex);
             RuleFor(o => o.Member_Name, f => f.Name.JobTitle());
             RuleFor(o => o.Wr_Member_Code.ToString(), f => f.Name.JobTitle());
             RuleFor(o => o.Wr_Member_Name, f => f.Name.JobTitle());
